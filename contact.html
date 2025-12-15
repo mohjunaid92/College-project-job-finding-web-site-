@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact | Camply</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("UAqN3Zkq2SunaMndI"); // replace with your EmailJS Public Key
+  })();
+</script>
+
+</head>
+<body>
+
+<nav class="navbar">
+    <h2 class="logo">Camply</h2>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a class="active" href="#">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </ul>
+</nav>
+
+<section class="page">
+    <h1>Contact Us</h1>
+
+    <form class="contact-form" id="contactForm">
+    <input type="text" name="from_name" placeholder="Your Name" required>
+    <input type="email" name="from_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button class="btn" type="submit">Send Message</button>
+</form>
+
+</section>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_qhafn3o",     
+        "template_o932ygm",      
+        this
+    )
+    .then(function() {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+    }, function(error) {
+        alert("Failed to send message. Try again!");
+        console.log(error);
+    });
+});
+</script>
+
+</body>
+</html>

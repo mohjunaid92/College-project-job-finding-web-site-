@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing | Camply</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2 class="logo">Camply.</h2>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="#">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </ul>
+</nav>
+
+<section class="pricing">
+    <h1>Simple Pricing</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h2>Basic</h2>
+            <p class="price">$9 / month</p>
+            <button class="btn">Choose Plan</button>
+        </div>
+
+        <div class="card highlight">
+            <h2>Pro</h2>
+            <p class="price">$19 / month</p>
+            <button class="btn">Choose Plan</button>
+        </div>
+
+        <div class="card">
+            <h2>Premium</h2>
+            <p class="price">$29 / month</p>
+            <button class="btn">Choose Plan</button>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  width: 300px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+  font-size: 20px;
+  color: #222;
+}
+
+.role {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.review {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
